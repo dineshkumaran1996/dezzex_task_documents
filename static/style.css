@@ -1,0 +1,44 @@
+/* style.css */
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+form {
+    margin-top: 10px;
+}
+
+#messages {
+    height: 300px;
+    overflow-y: scroll;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+#messages p{
+    background-color:rgb(77, 168, 161,0.5);
+    width: fit-content;
+    padding: 5px 10px;
+    border-radius: 7px;
+    
+}
+
+#message-form input[type="text"] {
+    width: 200px;
+}
+
+#message-form button {
+    margin-left: 10px;
+}
+
+#login-form {
+    width: 200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#login-form input[type="text"],
+#login-form input[type="password"] {
+    width: 100%;
+    margin-bottom: 10px;
+}

@@ -1,0 +1,26 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Real-Time Messaging App</title>
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+</head>
+<body>
+    <script src="app.js"></script>
+    <div id="messages">{%for i in msg%}
+    <p ><b style="font-size:small; color: crimson;">{{i.user.username}}</b> <br>{{i.content}}</p>
+
+    {%endfor%}</div>
+    
+    <form id="message-form" action="{{url_for('create_message')}}" method="POST">
+        <input type="text" id="message-input" placeholder="Enter message..." name="content">
+        <button type="submit">Send</button>
+    </form>
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.3.1/socket.io.js"></script>
+    <script src="app.js"></script>
+    <a href="{{url_for('logout')}}">Logout</a>
+</body>
+</html>

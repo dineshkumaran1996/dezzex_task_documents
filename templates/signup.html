@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration page</title>
+</head>
+<body>
+    <a href="{{url_for('home')}}">login</a>
+    <form action="{{url_for('signup')}}" method="post">
+        <table>
+            <tr>
+                <td>
+                    <label for="username">Username</label>
+                </td>
+                <td>
+                    <input type="text" name="username" required >
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="password">Password</label>
+                </td>
+                <td>
+                    <input type="password" name="password" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="confirm_password">Confirm Password</label>
+                </td>
+                <td>
+                    <input type="password" name="confirm_password" required>
+                </td>
+            </tr>
+        </table>
+        <button type="submit">Signup</button>
+    </form>
+    <h5>{{msg}}</h5>
+</body>
+</html>
